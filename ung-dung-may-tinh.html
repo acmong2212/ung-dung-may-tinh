@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pham Duc Thang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Caculator</h2>
+<div class="input">
+    <input type="number" id="value1" onchange="getValueInput1()">
+    <input type="number" id="value2" onchange="getValueInput2()">
+</div>
+<div>
+    <button onclick="onAddition()">Addition(+)</button>
+    <button onclick="onSubtraction()">Subtraction(-)</button>
+    <button onclick="onMultiplication()">Multiplication(X)</button>
+    <button onclick="onDivision()">Division(/)</button>
+</div>
+<div class="result">
+    <div>Result Division:</div>
+    <div id="result">1</div>
+</div>
+</body>
+</html>
+<script>
+    let valueInput1;
+    let valueInput2;
+    function getValueInput1() {
+        document.querySelector('input').value;
+    }
+    function getValueInput2() {
+        document.querySelector('input').value;
+    }
+    function onAddition() {
+        valueInput1 = document.getElementById('value1').value
+        valueInput2 = document.getElementById('value2').value
+        let result = Number(valueInput1) + Number(valueInput2)
+        console.log(result)
+        document.getElementById('result').innerText=result
+
+    }
+    function onSubtraction() {
+        valueInput1 = document.getElementById('value1').value;
+        valueInput2 = document.getElementById('value2').value
+        let result = Number(valueInput1) - Number(valueInput2)
+        console.log(result)
+        document.getElementById('result').innerText=result
+    }
+    function onMultiplication() {
+        valueInput1 = document.getElementById('value1').value;
+        valueInput2 = document.getElementById('value2').value;
+        let result = Number(valueInput1) * Number(valueInput2)
+        console.log(result)
+        document.getElementById('result').innerText=result
+    }
+    function onDivision() {
+        valueInput1 = document.getElementById('value1').value;
+        valueInput2 = document.getElementById('value2').value;
+        let result = Number(valueInput1) / Number(valueInput2)
+        console.log(result)
+        document.getElementById('result').innerText=result
+    }
+</script>
